@@ -1,4 +1,4 @@
-public class Leetcode_01_1295 {
+public class FindNumbersWithEvenNumberOfDigits_1295 {
     public static int findNumbers(int[] nums) {
         int resultCount = 0;
         for (int item: nums) {

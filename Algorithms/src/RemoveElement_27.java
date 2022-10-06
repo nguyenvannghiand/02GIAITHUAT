@@ -1,4 +1,4 @@
-public class _27_RemoveElement {
+public class RemoveElement_27 {
     public static int removeElement(int[] nums, int val) {
         int n = nums.length;
         for (int i = 0; i < n; ) {
