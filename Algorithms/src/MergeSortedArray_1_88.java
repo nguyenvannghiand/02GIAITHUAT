@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class MergeSortedArray_88a {
+public class MergeSortedArray_1_88 {
     public static void merge(int[] n1, int m, int[] n2, int n) {
         int i = m - 1;
         int j = n - 1;
