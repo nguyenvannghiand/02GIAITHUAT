@@ -1,3 +1,4 @@
+
 public class LinkedList {
 
 	/*
@@ -102,6 +103,37 @@ public class LinkedList {
         return headNode;
     }
 
+    private static Node removeAtIndex(Node headNode, int index) {
+        if (headNode == null || index < 0) {
+            return null;
+        }
+        if (index == 0) {
+            return removeAtHead(headNode);
+        }
+
+        Node currentNode = headNode;
+        Node prevNode = null;
+        int count = 0;
+        boolean bIsFound = false;
+        while (currentNode != null) {
+            if (count == index) {
+                // remove currentNode
+                bIsFound = true;
+                break;
+            }
+            prevNode = currentNode;
+            currentNode = currentNode.next;
+            count++;
+        }
+
+        // remove currentNode
+        if (bIsFound) {
+            prevNode.next = currentNode.next;
+        }
+
+        return headNode;
+    }
+
 	public static void main(String[] args) {
 		Node n1 = new Node(1);
 		Node n2 = new Node(2);
@@ -124,6 +156,13 @@ public class LinkedList {
         n1 = removeAtTail(n1);
         printLinkedList(n1);
         n1 = removeAtTail(n1);
+        printLinkedList(n1);
+        //
+
+        n1 = removeAtIndex(n1, 0);
+        printLinkedList(n1);
+
+        n1 = removeAtIndex(n1, 1);
         printLinkedList(n1);
 	}
 }
