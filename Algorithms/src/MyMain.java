@@ -39,6 +39,20 @@ public class MyMain {
 		System.out.println(stack.push(4));
 		System.out.println(stack.push(5));
 		stack.show();
+		MyArrayQueue myQueue = new MyArrayQueue(3);
+		System.out.println(myQueue.push(1));
+		System.out.println(myQueue.count());
+		System.out.println(myQueue.push(2));
+		System.out.println(myQueue.count());
+		System.out.println(myQueue.push(3));
+		System.out.println(myQueue.count());
+		System.out.println(myQueue.push(4));
+		System.out.println(myQueue.count());
+		myQueue.show();
+		myQueue.pop();
+		System.out.println(myQueue.count());
+		myQueue.show();
+
 
 	}
 }
